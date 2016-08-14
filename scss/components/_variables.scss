@@ -1,0 +1,46 @@
+$primary-color-green: rgb(169, 207, 85);
+$primary-color-blue: rgb(78, 144, 199);
+$primary-color-red: rgb(255, 127, 104);
+$primary-color-orange: rgb(255, 169, 64);
+$nav-panel-color: rgb(250, 250, 250);
+$border-color: rgb(229, 229, 229);
+$border-radius: 5px;
+$border-radius-round: 100%;
+$nav-a-color: rgb(119, 119, 119);
+$primary-white: rgb(255, 255, 255);
+$primary-black: rgb(0, 0, 0);
+$icons-color: rgb(204, 204, 204);
+$search-color: rgb(222, 222, 222);
+$primary-select : rgb(246, 246, 246);
+$select-background: rgb(237, 253, 202);
+$icon-line-height: 45px;
+$switch-label-width: 42px;
+
+$global-font-icon: 'project';
+
+@mixin link-text {
+	text-decoration: none;
+	color: $nav-a-color;
+}
+
+@mixin round {
+	display: inline-block;
+	border-radius: $border-radius-round;
+	width: $icon-line-height;
+	height: $icon-line-height;
+	line-height: $icon-line-height;
+}
+
+@mixin diagram-hack {
+	border: 10px solid $primary-color-green;
+  border-left: 10px solid $nav-panel-color;
+  border-radius: $border-radius-round;
+}
+
+@mixin half-round {
+	width: 160px;
+  height: 160px;
+  background: $nav-panel-color;
+  background-image: linear-gradient(to right, transparent 50%, $primary-color-green 0);
+  border-radius: $border-radius-round;
+}

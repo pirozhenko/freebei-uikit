@@ -1,0 +1,65 @@
+.icon {
+  font-family: $global-font-icon;
+  position: relative;
+  color: $icons-color;
+
+  &:before {
+    position: absolute;
+  }
+
+  &.-bell {
+    &:before {
+      content: $icon-bell;
+      z-index: -1;
+    }
+  }
+  &.-check {
+    &:before {
+      content: $icon-check;
+    }
+  }
+  &.-close {
+    &:before {
+      content: $icon-close;
+    }
+  }
+  &.-eye {
+    &:before {
+      content: $icon-eye;
+    }
+  }
+  &.-like {
+    &:before {
+      content: $icon-like;
+    }
+  }
+  &.-lock {
+    &:before {
+      content: $icon-lock;
+    }
+  }
+  &.-msg {
+    &:before {
+      content: $icon-msg;
+      z-index: -1;
+      font-size: 2rem;
+      left: -20px;
+    }
+  }
+  &.-search {
+    &:before {
+      content: $icon-search;
+    }
+  }
+  &.-user {
+    &:before {
+      content: $icon-user;
+    }
+  }
+  &.-users {
+    &:before {
+      content: $icon-users;
+    }
+  }
+
+}

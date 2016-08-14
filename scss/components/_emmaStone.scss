@@ -1,0 +1,53 @@
+	.person {
+		width: 100%;
+		border: 1px solid $border-color;
+		border-radius: 5px;
+		margin-top: 30px;
+		figure {
+
+			margin: 0;
+
+			img {
+				margin: 25px;
+				border: 2px solid $border-color;
+				border-radius: 100%;
+				padding: 10px;
+			}
+
+			figcaption {
+				text-transform: capitalize;
+				margin-right: 50px;
+				
+				p {
+					margin: 5px 0 5px 0;
+					color: $nav-a-color;
+					font-size: 1.3rem;
+				}
+			}
+		}
+
+		.person-social {
+			width: 33%;
+			padding: 17px 35px;
+			color: $primary-white;
+			font-size: 1.8rem;
+			font-weight: bold;
+			margin-right: 2.3px;
+			text-align: right;
+		}
+
+		.likes {
+			background-color: $primary-color-green;
+			border-radius: 0 0 0 5px;
+		}
+
+		.users {
+			background-color: $primary-color-red;
+		}
+
+		.watch {
+			background-color: $primary-color-blue;
+			border-radius: 0 0 5px 0;
+			margin-right: 0;
+	}
+}

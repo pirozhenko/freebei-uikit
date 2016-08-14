@@ -1,0 +1,111 @@
+.range {
+    position: relative;
+    margin: 70px 0;
+    width: 455px;
+
+    [type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        outline: none;
+
+        &::-webkit-slider-runnable-track {
+            height: 10px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: #ededed;
+            border-radius: 5px;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: 8px solid;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            margin-top: -9px;
+        }
+    }
+}
+
+.range-1 {
+
+    [type=range] {
+
+        &::-webkit-slider-thumb {
+            border: 8px solid $primary-color-blue;
+            background-image: linear-gradient(to right, transparent 70px, #a9cf55 70px, 335px, transparent 60%);
+        }
+    }
+}
+
+.range1-value {
+    position: absolute;
+    background: $primary-color-blue;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    bottom: 180%;
+    left: 25%;
+
+    &:after {
+        content: "";
+        position: absolute;
+        border-top: 8px solid $primary-color-blue;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: 100%;
+        left: 35%;
+    }
+}
+
+
+.range-3 {
+    font-weight: semi-bold;
+
+    [type=range] {
+        -webkit-appearance: none;
+        width: 83%;
+
+        &::-webkit-slider-thumb {
+            border: 8px solid $primary-color-orange;
+        }
+
+        &::-webkit-progress-value {
+            background-color: $primary-color-orange;
+        }
+    }
+}
+
+// ===================================
+$multiRangeHeight: 2em;
+.range-2 {
+    input[type="range"][multiple] {
+      display: block;
+      height: $multiRangeHeight;
+      margin: 0;
+      pointer-events: none;
+
+      & + input[type="range"][multiple] {
+        margin-top: $multiRangeHeight * -1;
+      }
+    }
+
+    @mixin multirange-thumb {
+      pointer-events: all;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      @include multirange-thumb;
+    }
+    input[type="range"]::-moz-range-thumb {
+      @include multirange-thumb;
+    }
+    input[type="range"]::-ms-thumb {
+      @include multirange-thumb;
+    }
+}
