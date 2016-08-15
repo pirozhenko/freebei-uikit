@@ -33,7 +33,6 @@
 		padding: 15px 20px;
 		width: 460px;
 	}
-
 }
 .header-nav-bar {
 
@@ -64,14 +63,20 @@
 	}
 }
 
-.header-icons {
+.header-icons-block {
+	position: relative;
+	display: inline-block;
+	margin-top: 10px;
+	padding-left: 17px;
 
 	.header-icon {
+
 		@include link-text;
 		@include round;
 		position: relative;
-		z-index: 999;
-
+		z-index: 1;
+		// margin-left: 75px;
+		// margin-top: 10px;
 		background: $primary-color-red;
 		border: 3px solid $primary-white;
 		color: $primary-white;
@@ -79,8 +84,16 @@
 		font-weight: bold;
 		text-align: center;
 	}
+
+	.header-icon:last-of-type {
+		margin-left: 45px
+	}
+
+}
 	.header-icon-logo {
+		float: right;
+		margin-top: 25px;
+		margin-right: 35px;
 		@include round;
 		background: url(../img/avatar.jpg);
 	}
-}

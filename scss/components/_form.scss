@@ -36,7 +36,7 @@
 				border-color: $primary-color-blue;
 			}
 
-			&:focus + .form-label:after {
+			&:focus + .form-label:before {
 				color: $primary-color-blue;
 			}
 		}

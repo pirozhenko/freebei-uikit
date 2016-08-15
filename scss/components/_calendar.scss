@@ -91,19 +91,19 @@ li.month-year {
         }
     }
 
-    .active.start + .active-inside {
+    .active.start {
 
-        &:before {
-            content: '';
-            position: absolute;
-            left: -75%;
-            top: -3px;
-            z-index: -100;
-            width: 75%;
-            height: 100%;
-            background: $primary-color-red;
-            border: 3px solid $primary-color-red;
-        }
+        box-shadow: 5px 0 0 $primary-color-red,
+                    10px 0 0 $primary-color-red,
+                    15px 0 0 $primary-color-red,
+                    20px 0 0 $primary-color-red,
+                    25px 0 0 $primary-color-red,
+                    30px 0 0 $primary-color-red,
+                    35px 0 0 $primary-color-red,
+                    40px 0 0 $primary-color-red,
+                    45px 0 0 $primary-color-red,
+                    50px 0 0 $primary-color-red,
+                    55px 0 0 $primary-color-red;
     }
 
     .active-inside {
@@ -124,7 +124,6 @@ li.month-year {
             background: $primary-color-red;
             border: 3px solid $primary-color-red;
         }
-
     }
 
 

@@ -47,12 +47,25 @@
 						</ul>
 
 						<div class="header-search pull-left">
-							<input type="text" placeholder="Search...">
-							<span class='icon'></span>
+							
+							<label for='search' class='icon -search'>
+								<input type="text" id='search' placeholder="Search...">
+							</label>
+
 						</div>
 						<div class="header-icons">
-							<a href="#" class='header-icon icon -bell'>4</a>
-							<a href="#" class='header-icon icon -msg'>14</a>
+
+							<div class='header-icons-block'>
+									<span class='icon -bell'></span>
+									<span class='header-icon'>4</span>
+							</div>
+							
+							<div class='header-icons-block'>
+								<span class='icon -msg'></span>
+									<span class='header-icon'>14</span>
+							</div>
+							
+
 							<div class='header-icon-logo'></div>
 						</div>
 					</div>
@@ -88,10 +101,7 @@
 
 								<label class="switch">
 								  <input type="checkbox" checked="checked">
-								  <div class="slider">
-								  	<!-- <span class='icon -check'></span> -->
-								  	<span class='icon -close'></span>
-								  </div>
+								  <div class="slider"></div>
 								</label>
 							</div>
 						</div>
@@ -227,21 +237,21 @@
 						  <li></li>
 						  <li></li>
 						  <li></li>
-						  <li class='active start'>1</li>
-						  <li class='active-inside'>2</li>
-						  <li class='active-inside'>3</li>
-						  <li class='active-inside'>4</li>
-						  <li class='active-inside'>5</li>
-						  <li class='active-inside'>6</li>
-						  <li class='active-inside'>7</li>
-						  <li class='active-inside'>8</li>
-						  <li class='active-inside'>9</li>
-						  <li class='active-inside'>10</li>
-						  <li class='active-inside'>11</li>
-						  <li class='active-inside'>12</li>
-						  <li class='active-inside'>13</li>
-						  <li class='active-inside'>14</li>
-						  <li class='active-inside'>15</li>
+						  <li>1</li>
+						  <li >2</li>
+						  <li >3</li>
+						  <li >4</li>
+						  <li >5</li>
+						  <li >6</li>
+						  <li >7</li>
+						  <li >8</li>
+						  <li >9</li>
+						  <li >10</li>
+						  <li >11</li>
+						  <li >12</li>
+						  <li >13</li>
+						  <li >14</li>
+						  <li class='active start'>15</li>
 						  <li class='active-inside'>16</li>
 						  <li class='active-inside'>17</li>
 						  <li class='active-inside'>18</li>
@@ -281,13 +291,20 @@
 						</div>
 					
 						<div class="range range-2">
-						  <input type="range" id='range2' multiple min="0" step="1" max="100" data-values="1 9">
+						  <input type="range" id='range2' multiple min="0" step="1" max="100" data-values="12 75" oninput="range2()">
+						  <div class='input-value'></div>
+						  <span>0</span>
+						  <span>25</span>
+						  <span>50</span>
+						  <span>75</span>
+						  <span class='last'>100</span>
 						</div>
 					
-						<div class="range range-3">
+						<div class="range range-3 clearfix">
+						  <input type="range" id="range3" min='0' value="85" oninput="range3()">
 						  <span>0%</span>
-						  <input type="range" id="range3" min='0' value="30" oninput="range3()">
-						  <span>100%</span>
+						  <span class='pull-right'>100%</span>
+						  <div class='input-value'></div>
 						</div>
 					</div>
 

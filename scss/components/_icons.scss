@@ -10,12 +10,14 @@
   &.-bell {
     &:before {
       content: $icon-bell;
-      z-index: -1;
+      font-size: 2.5rem;
+      right: -75px;
+      top: -5px;
     }
   }
-  &.-check {
+  &.-checking {
     &:before {
-      content: $icon-check;
+      content: $icon-checking;
     }
   }
   &.-close {
@@ -26,39 +28,58 @@
   &.-eye {
     &:before {
       content: $icon-eye;
+      left: 35px;
+      font-size: 2.3rem;
     }
   }
   &.-like {
     &:before {
       content: $icon-like;
+      left: 35px;
+      font-size: 2.3rem;
     }
   }
   &.-lock {
     &:before {
       content: $icon-lock;
+      font-size: 2rem;
+      top: -70px;
+      left: 15px;
+      font-weight: bold;
     }
   }
   &.-msg {
     &:before {
-      content: $icon-msg;
-      z-index: -1;
-      font-size: 2rem;
-      left: -20px;
+      content: $icon-msg;;
+      font-size: 2.5rem;
+      right: -70px;
+      top: -2px;
     }
   }
   &.-search {
     &:before {
       content: $icon-search;
+      top: -20px;
+      right: 15px;
+      font-size: 2.5rem;
+      color: $search-color;
+
     }
   }
   &.-user {
     &:before {
       content: $icon-user;
+      font-size: 2rem;
+      top: -70px;
+      left: 15px;
+      font-weight: bold;
     }
   }
   &.-users {
     &:before {
       content: $icon-users;
+      left: 35px;
+      font-size: 2.3rem;
     }
   }
 

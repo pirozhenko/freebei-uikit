@@ -4,6 +4,34 @@
   .switch-round {
     margin-right: 35px;
   }
+
+  .switch-square {
+    position: relative;
+
+    .switch {
+
+      &:after,
+      &:before {
+        font-family: $global-font-icon;
+        color: $primary-white;
+        position: absolute;
+        font-size: 1.6rem;
+        top: 15px;
+        font-weight: bold;
+      }
+
+      &:before {
+        content: $icon-checking;
+        left: 15px;
+        z-index: 1;
+      }
+
+      &:after {
+        right: 15px;
+        content: $icon-close;
+      }
+    }
+  }
 }
 
 .switch {
@@ -19,10 +47,6 @@
 
   input:checked + .slider {
     background-color: $primary-color-green;
-  }
-
-  input:focus + .slider {
-    // box-shadow: 0 0 1px #2196F3;
   }
 
   input:checked + .slider:before {
@@ -63,13 +87,14 @@
 
     &:before {
       -webkit-transition: .4s;
-      background-color: white;
+      background-color: $primary-white;
       border-radius: $border-radius;
       bottom: 4px;
       content: "";
       height: $switch-label-width;
       left: 4px;
       position: absolute;
+      z-index: 5;
       transition: .4s;
       width: $switch-label-width;
     }
