@@ -1,49 +1,46 @@
 function range1() {
     var rng1 = document.querySelector('#range1'),
-        value = document.querySelector('.range1-value');
+        value = rng1.value,
+        valueBlock = document.querySelector('.range1-value');
 
-    value.innerHTML = rng1.value;
+        valueBlock.style.left = (value - 5) + '%';
+        valueBlock.innerHTML = rng1.value;
 }
 
-var elm = document.querySelector('#range2');
-var container = elm.parentNode;
-var values = elm.getAttribute('data-values').split(' ');
+
+
+var rng2 = document.querySelector('#range2');
+var container = rng2.parentNode;
+var values = rng2.getAttribute('data-values').split(' ');
 
 values.forEach(function (value, i, values) {
-  var rangePart = elm.cloneNode();
+  var rangePart = rng2.cloneNode();
   rangePart.type = 'range';
   rangePart.removeAttribute('data-values');
   rangePart.value = value;
-  rangePart = container.insertBefore(rangePart, elm);
+  rangePart = container.insertBefore(rangePart, rng2);
 });
 
-elm.remove();
+rng2.remove();
 
 function range2() {
-  var rng2 = document.querySelector('#range2'),
-      value1 = values[0],
+  var value1 = values[0],
       value2 = values[1],
-      // thumb1 = document.querySelector('');
-      valColor = document.querySelector('input-value').elementFromPoint(x,y);
-    
+      value = value2 - value1,
+      // value = rng2.value,
+      line = document.getElementById('input-value2');
+
+      line.style.width = (value) + '%';
 
     console.log (value1);
-    console.log (valColor);
     console.log (value2);
+    console.log (value);
 }
 
 
 function range3() {
     var rng3 = document.querySelector('#range3'),
-        // value = document.querySelector('.range1-value');
+        line = document.getElementById('input-value3'),
         value = rng3.value;
-        rng3.style.backgroundPosition
-
-    value.innerHTML = rng3.value;
-    console.log(value);
-    console.log();
-}
-
-function what() {
-  console.log(this);
+        line.style.width = value + '%';
 }
