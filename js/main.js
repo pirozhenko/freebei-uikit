@@ -11,12 +11,12 @@ function range1() {
 
 var rng2 = document.querySelector('#range2');
 var container = rng2.parentNode;
-var values = rng2.getAttribute('data-values').split(' ');
+var values = rng2.getAttribute('value').split(',');
 
 values.forEach(function (value, i, values) {
   var rangePart = rng2.cloneNode();
   rangePart.type = 'range';
-  rangePart.removeAttribute('data-values');
+  rangePart.removeAttribute('value');
   rangePart.value = value;
   rangePart = container.insertBefore(rangePart, rng2);
 });
@@ -24,17 +24,17 @@ values.forEach(function (value, i, values) {
 rng2.remove();
 
 function range2() {
-  var value1 = values[0],
-      value2 = values[1],
-      value = value2 - value1,
-      // value = rng2.value,
+  var rngOrig = document.querySelector("[type='range'][multiple]"),
+      rngOrigVal = rngOrig.value,
+
+      rngClone = document.querySelector("[type='range'][multiple] + [type='range'][multiple]"),
+      rngCloneVal = rngClone.value,
+
       line = document.getElementById('input-value2');
 
-      line.style.width = (value) + '%';
+      line.style.left = (rngOrigVal) + '%';
+      line.style.width = (rngCloneVal - rngOrigVal) + '%';
 
-    console.log (value1);
-    console.log (value2);
-    console.log (value);
 }
 
 
