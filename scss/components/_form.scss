@@ -1,53 +1,53 @@
 .section-form {
-	width: 100%;
-	border: 1px solid $border-color;
-	border-radius: $border-radius;
-	margin-bottom: 55px;
+  width: 100%;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  margin-bottom: 55px;
 
-	.form-header {
-		width: 100%;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 1.5rem;
-		padding: 15px 35px;
-		color: $nav-a-color;
-		letter-spacing: 4px;
-		background: $nav-panel-color;
-		border-bottom: 1px solid $border-color;
-	}
+  .form-header {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 15px 35px;
+    color: $nav-a-color;
+    letter-spacing: 4px;
+    background: $nav-panel-color;
+    border-bottom: 1px solid $border-color;
+  }
 
-	.form-container {
-		padding: 40px 40px 50px;
+  .form-container {
+    padding: 40px 40px 50px;
 
-		[type='text'],
-		[type='password'] {
-			width: 100%;
-			display: block;
-			outline: none;
-			border: 2px solid $border-color;
-			border-radius: $border-radius;
-			padding-left: 60px;
-			height: 65px;
-			margin-bottom: 21px;
-			font-size: 1.8rem;
-			color: $nav-a-color;
+    [type='text'],
+    [type='password'] {
+      width: 100%;
+      display: block;
+      outline: none;
+      border: 2px solid $border-color;
+      border-radius: $border-radius;
+      padding-left: 60px;
+      height: 65px;
+      margin-bottom: 21px;
+      font-size: 1.8rem;
+      color: $nav-a-color;
 
-			&:focus {
-				border-color: $primary-color-blue;
-			}
+      &:focus {
+        border-color: $primary-color-blue;
+      }
 
-			&:focus + .form-label:before {
-				color: $primary-color-blue;
-			}
-		}
-		.btn {
-			display: block;
-			border-radius: $border-radius;
-			background: $primary-color-blue;
-			font-size: 2rem;
-			font-weight: bold;
-			padding: 12px 54px;
-			color: $primary-white;
-		}
-	}
+      &:focus + .form-label:before {
+        color: $primary-color-blue;
+      }
+    }
+    .btn {
+      display: block;
+      border-radius: $border-radius;
+      background: $primary-color-blue;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 12px 54px;
+      color: $primary-white;
+    }
+  }
 }

@@ -2,10 +2,12 @@
     position: relative;
     margin: 70px 0;
     width: 100%;
+
     span {
         font-size: 1rem;
         font-weight: bold;
     }
+
     [type=range] {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -34,11 +36,12 @@
             margin-top: -9px;
         }
     }
+
     .input-value {
         position: absolute;
         background: $primary-color-green;
         height: 12px;
-        width: 60%;
+        width: 58%;
         left: 15%;
         top: 10px;
     }
@@ -66,7 +69,7 @@
     border-radius: 5px;
     display: inline-block;
     bottom: 180%;
-    left: 50%;
+    left: 25%;
 
     &:after {
         content: "";
@@ -79,30 +82,6 @@
     }
 }
 
-
-.range-3 {
-    .input-value {
-        left: 0;
-        top: 5px;
-        background: $primary-color-orange;
-    }
-    [type=range] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-
-        &::-webkit-slider-thumb {
-            border: 8px solid $primary-color-orange;
-        }
-
-        &::-webkit-progress-value {
-            background-color: $primary-color-orange;
-        }
-    }
-}
-
-// ===================================
-$multiRangeHeight: 2em;
 .range-2 {
 
     [type=range][multiple] {
@@ -129,10 +108,6 @@ $multiRangeHeight: 2em;
         margin-right: 20%;
     }
 
-    @mixin multirange-thumb {
-      pointer-events: all;
-    }
-
     [type=range]::-webkit-slider-thumb {
       @include multirange-thumb;
     }
@@ -145,3 +120,28 @@ $multiRangeHeight: 2em;
       @include multirange-thumb;
     }
 }
+
+.range-3 {
+
+    .input-value {
+        left: 0;
+        top: 5px;
+        width: 82%;
+        background: $primary-color-orange;
+    }
+
+    [type=range] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &::-webkit-slider-thumb {
+            border: 8px solid $primary-color-orange;
+        }
+
+        &::-webkit-progress-value {
+            background-color: $primary-color-orange;
+        }
+    }
+}
+

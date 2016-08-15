@@ -43,16 +43,15 @@
 
   input {
     display: none;
-  }
 
-  input:checked + .slider {
-    background-color: $primary-color-green;
-  }
-
-  input:checked + .slider:before {
-    -ms-transform: translateX($switch-label-width + 8);
-    -webkit-transform: translateX($switch-label-width + 8);
-    transform: translateX($switch-label-width + 8);
+    &:checked + .slider {
+      background-color: $primary-color-green;
+    }
+    &:checked + .slider:before {
+      -ms-transform: translateX($switch-label-width + 8);
+      -webkit-transform: translateX($switch-label-width + 8);
+      transform: translateX($switch-label-width + 8);
+    }
   }
 
   .slider {
@@ -75,6 +74,7 @@
       margin-left: 15px;
       text-transform: uppercase;
     }
+
     .switch-off {
       float: right;
       font-size: 1.2rem;
@@ -86,11 +86,11 @@
     }
 
     &:before {
+      content: "";
       -webkit-transition: .4s;
       background-color: $primary-white;
       border-radius: $border-radius;
       bottom: 4px;
-      content: "";
       height: $switch-label-width;
       left: 4px;
       position: absolute;
@@ -99,6 +99,7 @@
       width: $switch-label-width;
     }
   }
+  
   .slider.round {
     border-radius: 34px;
   }

@@ -1,95 +1,94 @@
 .content-checkradio {
-	position: relative;
-	margin-left: 85px;
-	margin-top: 15px;
+  position: relative;
+  margin-left: 85px;
+  margin-top: 15px;
 
-	input {
-		display: none;
-	}
+  input {
+    display: none;
+  }
 
-	label {
-		font-size: 1.5rem;
-	  position: relative;
-	  display: inline-block;
-	  margin-right: 55px;
-	  padding-left: 45px;
-	  cursor: pointer;
-	  font-weight: bold;
-	  color: $nav-a-color;
-	}
+  label {
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+    margin-right: 55px;
+    padding-left: 45px;
+    cursor: pointer;
+    font-weight: bold;
+    color: $nav-a-color;
+  }
 
-	.style-container {
-		position: absolute;
-		display: block;
-	  top: 0;
-	  left: 0;
-	  width: 35px;
-	  height: 35px;
-	  border: 3px solid $search-color;
-		border-radius: $border-radius;
-	}
+  .style-container {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border: 3px solid $search-color;
+    border-radius: $border-radius;
+  }
 
 }
 .selected {
 
-		.style-container:after {
-			content: '';
-			position: absolute;
-			display: none;
-			left: 6px;
-			top: 6px;
-			height: 16px;
-			width: 16px;
-		}
+    .style-container:after {
+      content: '';
+      position: absolute;
+      display: none;
+      left: 6px;
+      top: 6px;
+      height: 16px;
+      width: 16px;
+    }
 
 }
 
 .checkbox-inputs {
-		margin-bottom: 55px;
-		margin-top: 5px;
+    margin-bottom: 55px;
+    margin-top: 5px;
 
-		.style-container:after {
-			top: 5px;
-			left: 10px;
-			width: 5px;
-			height: 12px;
-			transform: rotate(45deg);
-			border: solid $primary-color-green;
-			border-width: 0 2px 2px 0;
-		}
+    .style-container:after {
+      top: 5px;
+      left: 10px;
+      width: 5px;
+      height: 12px;
+      transform: rotate(45deg);
+      border: solid $primary-color-green;
+      border-width: 0 2px 2px 0;
+    }
 }
-
 
 .radio-inputs {
 
 
-	.style-container {
-		border-radius: $border-radius-round;
+  .style-container {
+    border-radius: $border-radius-round;
 
-		&:after {
-			border-radius: $border-radius-round;
-			background: $primary-color-green;
-		}
-	}
+    &:after {
+      border-radius: $border-radius-round;
+      background: $primary-color-green;
+    }
+  }
 }
 
 .hover,
 .selected {
 
-	&:hover [type='checkbox'] ~ .style-container,
-	& [type='checkbox']:focus ~ .style-container {
-	  	border-color: $primary-color-green;
-	 }
+  &:hover [type='checkbox'] ~ .style-container,
+  & [type='checkbox']:focus ~ .style-container {
+      border-color: $primary-color-green;
+   }
 }
 
 .selected {
 
-		[type='checkbox']:checked ~ .style-container {
-			background: $select-background;
-			border-color: $primary-color-green;
-		}
+    [type='checkbox']:checked ~ .style-container {
+      background: $select-background;
+      border-color: $primary-color-green;
+    }
 
-		[type='checkbox']:checked ~ .style-container:after {
-			display: block;
-		}
+    [type='checkbox']:checked ~ .style-container:after {
+      display: block;
+    }
 }

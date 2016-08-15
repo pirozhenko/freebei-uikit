@@ -1,99 +1,93 @@
 .header {
-	background: $nav-panel-color;
-	border-bottom: 1px solid $border-color;
-	width: 100%;
+  background: $nav-panel-color;
+  border-bottom: 1px solid $border-color;
+  width: 100%;
 
-	.header-gradient {
-		width: 100%;
-		height: 9px;
-		background: linear-gradient(to right, $primary-color-green 1.35%,
-      	                                  $primary-color-blue 0.875%, 17.50%,
-      	                                  $primary-color-red 17.50%, 33.75%,
-      	                                  $primary-color-orange 33.75%, 50.125%,
-      	                                  $primary-color-green 50.125%, 66.35%,
-      	                                  $primary-color-blue 66.35%, 82.55%,
-      	                                  $primary-color-red 82.55%, 98.85%,
-      	                                  $primary-color-orange 0.875%);
-	}
+  .header-gradient {
+    width: 100%;
+    height: 9px;
+    @include header-gradient;
+  }
 }
+
 .header-nav {
-	padding: 10px 0 5px;
+  padding: 10px 0 5px;
 }
-.header-search {
-	position: relative;
 
-	[type='text'] {
-		border-radius: $border-radius;
-		border: 1px solid $border-color;
-		color: $search-color;
-		font-size: 30px;
-		margin-left: 70px;
-		margin-top: 15px;
-		outline: none;
-		padding: 15px 20px;
-		width: 460px;
-	}
+.header-search {
+  position: relative;
+
+  [type='text'] {
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    color: $search-color;
+    font-size: 30px;
+    margin-left: 70px;
+    margin-top: 15px;
+    outline: none;
+    padding: 15px 20px;
+    width: 460px;
+  }
 }
+
 .header-nav-bar {
 
-	.nav-bar-items {
-		display: inline-block;
-		font-size: 1.7rem;
-		font-weight: bold;
-		letter-spacing: 1.5px;
-		line-height: 2.4;
-		list-style: none;
-		margin-left: 60px;
+  .nav-bar-items {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 2.4;
+    list-style: none;
+    margin-left: 60px;
 
-		&:nth-of-type(4) {
-			margin-left: 85px;
-		}
+    &:nth-of-type(4) {
+      margin-left: 85px;
+    }
 
-		.items {
-			@include link-text;
+    .items {
+      @include link-text;
 
-			&:hover {
-			color: $nav-a-color + 25%;
-			}
-		}
+      &:hover {
+      color: $nav-a-color + 25%;
+      }
+    }
 
-		&:first-child {
-			margin-left: 0;
-		}
-	}
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
 
 .header-icons-block {
-	position: relative;
-	display: inline-block;
-	margin-top: 10px;
-	padding-left: 17px;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 17px;
 
-	.header-icon {
+  .header-icon {
 
-		@include link-text;
-		@include round;
-		position: relative;
-		z-index: 1;
-		// margin-left: 75px;
-		// margin-top: 10px;
-		background: $primary-color-red;
-		border: 3px solid $primary-white;
-		color: $primary-white;
-		font-size: 1.4rem;
-		font-weight: bold;
-		text-align: center;
-	}
+    @include link-text;
+    @include round;
+    position: relative;
+    z-index: 1;
+    background: $primary-color-red;
+    border: 3px solid $primary-white;
+    color: $primary-white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+  }
 
-	.header-icon:last-of-type {
-		margin-left: 45px
-	}
+  .header-icon:last-of-type {
+    margin-left: 45px
+  }
 
 }
-	.header-icon-logo {
-		float: right;
-		margin-top: 25px;
-		margin-right: 35px;
-		@include round;
-		background: url(../img/avatar.jpg);
-	}
+.header-icon-logo {
+  float: right;
+  margin-top: 25px;
+  margin-right: 35px;
+  @include round;
+  background: url(../img/avatar.jpg);
+}

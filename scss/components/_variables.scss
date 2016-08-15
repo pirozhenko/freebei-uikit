@@ -15,32 +15,67 @@ $primary-select : rgb(246, 246, 246);
 $select-background: rgb(237, 253, 202);
 $icon-line-height: 45px;
 $switch-label-width: 42px;
+$multiRangeHeight: 2em;
 
 $global-font-icon: 'project';
 
 @mixin link-text {
-	text-decoration: none;
-	color: $nav-a-color;
+  text-decoration: none;
+  color: $nav-a-color;
 }
 
 @mixin round {
-	display: inline-block;
-	border-radius: $border-radius-round;
-	width: $icon-line-height;
-	height: $icon-line-height;
-	line-height: $icon-line-height;
+  display: inline-block;
+  border-radius: $border-radius-round;
+  width: $icon-line-height;
+  height: $icon-line-height;
+  line-height: $icon-line-height;
 }
 
 @mixin diagram-hack {
-	border: 10px solid $primary-color-green;
+  border: 10px solid $primary-color-green;
   border-left: 10px solid $nav-panel-color;
   border-radius: $border-radius-round;
 }
 
 @mixin half-round {
-	width: 160px;
+  width: 160px;
   height: 160px;
   background: $nav-panel-color;
   background-image: linear-gradient(to right, transparent 50%, $primary-color-green 0);
   border-radius: $border-radius-round;
+}
+
+@mixin red-border-color {
+  border-color: $primary-color-red;
+  color: $primary-color-red;
+}
+
+@mixin box-shadow-hack {
+  box-shadow: 5px 0 0 $primary-color-red,
+            10px 0 0 $primary-color-red,
+            15px 0 0 $primary-color-red,
+            20px 0 0 $primary-color-red,
+            25px 0 0 $primary-color-red,
+            30px 0 0 $primary-color-red,
+            35px 0 0 $primary-color-red,
+            40px 0 0 $primary-color-red,
+            45px 0 0 $primary-color-red,
+            50px 0 0 $primary-color-red,
+            55px 0 0 $primary-color-red;
+}
+
+ @mixin multirange-thumb {
+   pointer-events: all;
+}
+
+@mixin header-gradient {
+  background: linear-gradient(to right, $primary-color-green 1.35%,
+                                        $primary-color-blue 0.875%, 17.50%,
+                                        $primary-color-red 17.50%, 33.75%,
+                                        $primary-color-orange 33.75%, 50.125%,
+                                        $primary-color-green 50.125%, 66.35%,
+                                        $primary-color-blue 66.35%, 82.55%,
+                                        $primary-color-red 82.55%, 98.85%,
+                                        $primary-color-orange 0.875%);
 }

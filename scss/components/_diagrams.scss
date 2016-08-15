@@ -5,9 +5,8 @@
   height: 160px;
   text-align: center;
   line-height: 135px;
-
-  @include diagram-hack;
   transform: rotate(45deg);
+  @include diagram-hack;
 
   &:after {
     content: '';
@@ -20,7 +19,6 @@
     left: -10px;
     top: -10px;
     transform: rotate(-40deg);
-
   }
 
   .progressbar-number {
@@ -28,14 +26,13 @@
     transform: rotate(-45deg);
     font-size: 3rem;
    }
-
 }
 
 .content-round-diagram {
   margin-left: 80px;
   .chart {
-    @include half-round;
     position: relative;
+    @include half-round;
 
     &:after {
       content: '';
@@ -48,7 +45,6 @@
       transform: rotate(90deg);
       transform-origin: left;
       left: 50%;
-
     }
   }
 }

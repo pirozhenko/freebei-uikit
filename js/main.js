@@ -20,16 +20,16 @@ values.forEach(function (value, i, values) {
 elm.remove();
 
 function range2() {
-	var rng2 = document.querySelector('#range2'),
-			value1 = values[0],
-			value2 = values[1],
-			// thumb1 = document.querySelector('');
-			valColor = document.querySelector('input-value').elementFromPoint(x,y);
-		
+  var rng2 = document.querySelector('#range2'),
+      value1 = values[0],
+      value2 = values[1],
+      // thumb1 = document.querySelector('');
+      valColor = document.querySelector('input-value').elementFromPoint(x,y);
+    
 
- 		console.log (value1);
- 		console.log (valColor);
- 		console.log (value2);
+    console.log (value1);
+    console.log (valColor);
+    console.log (value2);
 }
 
 
@@ -45,5 +45,5 @@ function range3() {
 }
 
 function what() {
-	console.log(this);
+  console.log(this);
 }
