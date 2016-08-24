@@ -1,7 +1,7 @@
 var gulp         = require('gulp'),
-    // postcss      = require('gulp-postcss'),
+    postcss      = require('gulp-postcss'),
     sass         = require('gulp-sass'),
-    // autoprefixer = require('autoprefixer'),
+    autoprefixer = require('autoprefixer'),
     browser      = require('browser-sync'),
     sourcemaps   = require('gulp-sourcemaps'),
     iconfont     = require("gulp-iconfont"),
@@ -10,11 +10,12 @@ var gulp         = require('gulp'),
 gulp.task('sass', function () {
   return gulp.src('scss/**/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'})
+        .on('error', sass.logError))
+        .pipe(postcss([ autoprefixer({ browsers: ['last 3 version'] }) ]))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css'))
         .pipe(browser.stream({match: '**/*.css'}))
-        // .pipe(postcss([ autoprefixer({ browsers: ['last 3 version'] }) ]));
 });
 
 gulp.task("build:icons", function() {
